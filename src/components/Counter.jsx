@@ -6,8 +6,8 @@ export default function Counter(){
 
 
     let i = 0;
-    const addFive = () => {
-        while(i<5){
+    const add = (j) => {
+        while(i<j){
             setCount((previousState)=>previousState+1);
             i= i+1;
         }
@@ -19,10 +19,11 @@ export default function Counter(){
         <div>
             {count}
             <p>
-                <button type="button" onClick={()=> setCount((previousState)=>previousState+1)} >Add 1</button>
+                {/* <button type="button" onClick={()=> setCount((previousState)=>previousState+1)} >Add 1</button> */}
+                <button type="button" onClick={()=> add(1)} >Add 1</button>
             </p>
             <p>
-            <button type="button" onClick={()=> addFive()} >Add 5</button>
+            <button type="button" onClick={()=> add(5)} >Add 5</button>
             </p>
         </div>
     )
